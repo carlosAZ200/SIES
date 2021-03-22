@@ -19,10 +19,10 @@ use SIES;
 
 create table es_usuarios(
 	USU_id int identity(1,1),
-	USU_documento int primary key,
+	USU_documento varchar(20) primary key,
 	USU_tipodoc varchar(50),
 	USU_nombre varchar(50),
-	USU_celular bigint,
+	USU_celular varchar(20),
 	USU_email varchar(50),
 	USU_genero varchar(50),
 	USU_aprendiz bit null,
@@ -54,10 +54,22 @@ insert into es_usuarios (
 	USU_fecharegistro
 ) values 
 
-	--(1023, 'CC', 'Carlos', 129213, '@email', 'M', 1, 1, 'asd', GETDATE(), 'asdk', 'asd', 'dos', 'tres', GETDATE()),
-	--(1024, 'CC', 'Carlos', 129213, '@email', 'M', 0, 0, 'asd', GETDATE(), 'asdk', 'asd', 'dos', 'tres', GETDATE()),
-	--(1025, 'CC', 'Carlos', 129213, '@email', 'M', 0, 0, 'asd', GETDATE(), 'asdk', 'asd', 'dos', 'tres', 2021-01-13),
-	(1026, 'CC', 'Carlos', 129213, '@email', 'M', 0, 0, 'asd', GETDATE(), 'asdk', 'asd', 'dos', 'tres', '2021-01-13')
+	('1023', 'CC', 'Carlos', '129213', '@email', 'M', 1, 1, 'asd', GETDATE(), 'asdk', 'asd', 'dos', 'tres', GETDATE()),
+	('1024', 'CC', 'Carlos', '129213', '@email', 'M', 0, 0, 'asd', GETDATE(), 'asdk', 'asd', 'dos', 'tres', GETDATE()),
+	('1025', 'CC', 'Carlos', '129213', '@email', 'M', 0, 0, 'asd', GETDATE(), 'asdk', 'asd', 'dos', 'tres', '13-01-2021'),
+	('1026', 'CC', 'Carlos', '129213', '@email', 'M', 0, 0, 'asd', GETDATE(), 'asdk', 'asd', 'dos', 'tres', '13-01-2021')
 ;
 
 select * from es_usuarios;
+
+delete from es_usuarios
+	--where USU_id = 3;
+
+
+alter table es_usuarios alter column USU_celular varchar(20) 
+
+SELECT 
+*
+FROM 
+es_usuarios
+WHERE USU_fecharegistro > '13-01-2021'

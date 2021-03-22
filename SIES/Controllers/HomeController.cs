@@ -38,10 +38,10 @@ namespace SIES.Controllers
             MantenimientoUsuarios ma = new MantenimientoUsuarios();
             Usuarios usu = new Usuarios
             {
-                Documento = int.Parse(collection["documento"]),
+                Documento = collection["documento"],
                 TipoDocumento = collection["tipodocumento"],
                 Nombre = collection["nombre"],
-                Celular = int.Parse(collection["celular"]),
+                Celular = collection["celular"],
                 Email = collection["email"],
                 Genero = collection["genero"],
                 Aprendiz = int.Parse(collection["aprendiz"]),
@@ -74,10 +74,10 @@ namespace SIES.Controllers
             Usuarios usu = new Usuarios
             {
                 Id = id,
-                Documento = int.Parse(collection["documento"].ToString()),
+                Documento = collection["documento"].ToString(),
                 TipoDocumento = collection["tipodocumento"].ToString(),
                 Nombre = collection["nombre"].ToString(),
-                Celular = int.Parse(collection["celular"].ToString()),
+                Celular = collection["celular"].ToString(),
                 Email = collection["email"].ToString(),
                 Genero = collection["genero"].ToString(),
                 Aprendiz = int.Parse(collection["aprendiz"].ToString()),
