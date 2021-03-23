@@ -1,8 +1,12 @@
-﻿@model IEnumerable<SIES.Models.Usuarios>
+﻿
+@model IEnumerable<SIES.Models.Usuarios>
 
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Principal.cshtml";
 }
+
+<h2>Index</h2>
 
 <!DOCTYPE html>
 
@@ -64,62 +68,67 @@
             </th>
             <th></th>
         </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Documento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TipoDocumento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Celular)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genero)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Aprendiz)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Egresado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.AreaFormacion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaEgresado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Direccion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Barrio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Ciudad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Departamento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaRegistro)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.Documento }) |
-                @Html.ActionLink("Details", "Details", new { id=item.Documento }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.Documento })
-            </td>
-        </tr>
-    }
-    
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Documento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoDocumento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Celular)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Aprendiz)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Egresado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AreaFormacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaEgresado)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Direccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Barrio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ciudad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Departamento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FechaRegistro)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Documento }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Documento }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Documento })
+                </td>
+            </tr>
+        }
+
     </table>
 </body>
 </html>
+
+
+
+

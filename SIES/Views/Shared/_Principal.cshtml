@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+
+        @Html.ActionLink("Inicio", "Index");
+        @Html.ActionLink("Crear", "Create");
+        <hr />
+        @RenderBody()
+        <hr />
+        <h3>Copyright 2021</h3>
+
+    </div>
+</body>
+</html>
