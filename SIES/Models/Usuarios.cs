@@ -8,10 +8,10 @@ namespace SIES.Models
     public class Usuarios
     {
         public int Id { get; set; }
-        public String Documento { get; set; }
+        public string Documento { get; set; }
         public string TipoDocumento { get; set; }
         public string Nombre { get; set; }
-        public String Celular { get; set; }
+        public string Celular { get; set; }
         public string Email { get; set; }
         public string Genero { get; set; }
         public int Aprendiz { get; set; }
